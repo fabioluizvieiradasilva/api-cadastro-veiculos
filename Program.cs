@@ -1,6 +1,14 @@
+using api_cadastro_veiculos.Infraestrutura.Db;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("mySql");
+builder.Services.AddDbContext<DbContexto>(options => 
+        options.UseMySql(connectionString,
+        ServerVersion.AutoDetect(connectionString)));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
