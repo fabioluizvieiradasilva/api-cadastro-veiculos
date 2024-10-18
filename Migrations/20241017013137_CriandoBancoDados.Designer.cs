@@ -11,8 +11,8 @@ using api_cadastro_veiculos.Infraestrutura.Db;
 namespace api_cadastro_veiculos.Migrations
 {
     [DbContext(typeof(DbContexto))]
-    [Migration("20241016170824_SeedAdministrador")]
-    partial class SeedAdministrador
+    [Migration("20241017013137_CriandoBancoDados")]
+    partial class CriandoBancoDados
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,9 +56,35 @@ namespace api_cadastro_veiculos.Migrations
                         {
                             Id = 1,
                             Email = "adm@veiculo.com",
-                            Perfil = "adm",
+                            Perfil = "Adm",
                             Senha = "123456"
                         });
+                });
+
+            modelBuilder.Entity("api_cadastro_veiculos.Dominio.Entidades.Veiculo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Fabricante")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Modelo")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Veiculos");
                 });
 #pragma warning restore 612, 618
         }

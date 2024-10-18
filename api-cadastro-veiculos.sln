@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api-cadastro-veiculos", "api-cadastro-veiculos.csproj", "{3843F080-2CC9-4451-ABD9-AF0AA8C90EB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{F12FD964-0258-4CB5-956C-9E3E342E0751}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3843F080-2CC9-4451-ABD9-AF0AA8C90EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3843F080-2CC9-4451-ABD9-AF0AA8C90EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3843F080-2CC9-4451-ABD9-AF0AA8C90EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12FD964-0258-4CB5-956C-9E3E342E0751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12FD964-0258-4CB5-956C-9E3E342E0751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12FD964-0258-4CB5-956C-9E3E342E0751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12FD964-0258-4CB5-956C-9E3E342E0751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

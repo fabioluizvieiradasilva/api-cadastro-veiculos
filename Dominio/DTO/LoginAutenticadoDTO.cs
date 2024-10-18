@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace api_cadastro_veiculos.Dominio.DTO
 {
-    public class LoginDTO
+    public class LoginAutenticadoDTO
     {
         public string Email { get; set; } = default!;
-        public string Senha { get; set; } = default!;
+        public string Perfil { get; set; } = default!;
+        public string Token { get; set; } = default!;
     }
 }

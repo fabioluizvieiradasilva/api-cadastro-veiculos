@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api_cadastro_veiculos.Dominio.Entidades;
+using api_cadastro_veiculos.Dominio.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace api_cadastro_veiculos.Infraestrutura.Db
@@ -16,6 +17,7 @@ namespace api_cadastro_veiculos.Infraestrutura.Db
         }
         
         public DbSet<Administrador> Administradores { get; set; } = default!;
+        public DbSet<Veiculo> Veiculos { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,7 +26,7 @@ namespace api_cadastro_veiculos.Infraestrutura.Db
                     Id = 1,
                     Email = "adm@veiculo.com",
                     Senha = "123456",
-                    Perfil = "adm"
+                    Perfil = PerfilEnum.Adm.ToString()
                 }
             );
         }
