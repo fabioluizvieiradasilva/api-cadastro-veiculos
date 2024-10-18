@@ -26,7 +26,8 @@ namespace api_cadastro_veiculos.Dominio.Servicos
 
         public void Excluir(Administrador administrador)
         {
-            throw new NotImplementedException();
+            _contexto.Administradores.Remove(administrador);
+            _contexto.SaveChanges();
         }
 
         public void Incluir(Administrador administrador)
